@@ -1,11 +1,10 @@
-# Docker Compose Text Data Extraction Service
+# Docker Compose Medical Text Extraction Service
 
-This project demonstrates how to deploy a multi-container application using Docker Compose. In this demo, we are building a system where users can input natural language text, and the service processes the input using the OpenAI API, extracts structured data, and stores it in a PostgreSQL database. Here's the project overview:
+This project demonstrates how to deploy a multi-container application using Docker Compose. In this demo, I am building a system where users can input medical prescription text, and the service processes the input using the OpenAI API, extracts structured data, and stores it in a PostgreSQL database. Here's the project overview:
 
-1. **Frontend**: A Streamlit app for users to input natural language text.
+1. **Frontend**: A Streamlit app for users to input prescription text.
 2. **Backend**: A FastAPI app that handles the API endpoints and data processing.
-3. **Service**: A backend service that calls the OpenAI API to process the text.
-4. **Database**: A PostgreSQL database that stores the structured data.
+3. **Database**: A PostgreSQL database that stores the structured data.
 
 
 ## Project Structure
@@ -13,16 +12,19 @@ This project demonstrates how to deploy a multi-container application using Dock
 ```
 docker-demo/text-extraction/
 ├── backend/
-│   ├── main.py             # FastAPI backend and service combined
-│   ├── extractor.py        # NLP extraction service code
-│   ├── Dockerfile          # Dockerfile for backend
-│   └── requirements.txt    # Python dependencies
+│   ├── config.py
+│   ├── database.py
+│   ├── models.py
+│   ├── extraction.py
+│   ├── main.py
+│   ├── Dockerfile
+│   └── requirements.txt
 ├── frontend/
-│   ├── app.py              # Streamlit frontend
-│   ├── Dockerfile          # Dockerfile for frontend
-│   └── requirements.txt    # Python dependencies
-├── docker-compose.yml      # Docker Compose configuration
-├── .env                    # Environment variables (OpenAI API keys, DB credentials)
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
+├── .env
+├── docker-compose.yml
 └── README.md
 ```
 
@@ -38,7 +40,7 @@ docker-demo/text-extraction/
 
    > Note: You must be in the same directory as the `docker-compose.yml` file.
 
-   This single command will build and start up all the containers: the frontend, backend, PostgreSQL database, and the NLP service.
+   This single command will build and start up all the containers: the frontend app, backend APIs, and PostgreSQL database
 
 
 ## Accessing the Application
@@ -47,8 +49,8 @@ docker-demo/text-extraction/
    - Open your browser and go to `http://localhost:8501` to access the Streamlit frontend.
    - Enter natural language text and click **Process Text** to extract structured data.
 
-2. **Backend and Service:**
-   - The backend API will be running on `http://localhost:8000` and is responsible for handling requests and processing data using the NLP service.
+2. **Backend:**
+   - The backend API will be running on `http://localhost:8000` and is responsible for handling requests and processing data using OpenAI.
    
 3. **PostgreSQL Database:**
    - The database is running in the `postgres` container.

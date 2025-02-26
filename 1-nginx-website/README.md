@@ -1,4 +1,4 @@
-# Docker Basic Nginx Website Demo
+# Docker Basic Nginx Website
 
 This project demonstrates how to setup a basic pre-built docker container. For this demo I am using Nginx docker image and host a static website using it. Here's the project overview:
 

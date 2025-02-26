@@ -23,12 +23,14 @@ A hands-on introduction to Docker concepts, workflows, and commands for ML Engin
 * Basic commands
 * Debugging containers
 
-### Part 4: Hands-on Docker Demo Projects
-* Demo 1: Pre-built Docker Nginx Website Deployment
-* Demo 2: Custom Docker PDF Generation with Python
-* Demo 3: Docker Compose Medical Text Extraction Service
+### Part 4: Hands-on Docker Projects
+* Project 1: Pre-built Docker Nginx Website Deployment
+* Project 2: Custom Docker PDF Generation with Python
+* Project 3: Docker Compose Medical Text Extraction Service
 
 ### Part 5: Docker for ML Projects
+* Key Benefits
+* Example ML Project Dockerfile using GPU
 
 ### Part 6: Modern Python Tooling uv
 * Comparison of conda, venv, pipenv, poetry, uv
@@ -231,6 +233,7 @@ Docker uses a layered filesystem to build images. Each instruction in a Dockerfi
 - Shared layers are stored once
 - Best practice: Order instructions from least to most frequently changed
 
+
 ## Part 3: Docker Compose Introduction
 
 ### What is Docker Compose?
@@ -306,15 +309,15 @@ networks:
 - **Volume Inspection**: `docker volume inspect <volume>`
 
 
-### Part 4: Hands-on Docker Projects
+## Part 4: Hands-on Docker Projects
 
-#### Project 1: Pre-built Docker Nginx Website Deployment
+### Project 1: Pre-built Docker Nginx Website Deployment
 This project is in [1-nginx-website](./1-nginx-website/) directory. Fmore more details on the project see the project [README](1-nginx-website/README.md).
 
-#### Project 2: Custom Docker PDF Generation with Python
+### Project 2: Custom Docker PDF Generation with Python
 This project is in [2-pdf-generator](./2-pdf-generator/) directory. Fmore more details on the project see the project [README](./2-pdf-generator/README.md).
 
-#### Project 3: Docker Compose Medical Text Extraction Service
+### Project 3: Docker Compose Medical Text Extraction Service
 This project is in [3-text-extractor](./3-text-extractor/) directory. Fmore more details on the project see the project [README](./3-text-extractor/README.md).
 
 

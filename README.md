@@ -305,7 +305,20 @@ networks:
 - **Network Inspection**: `docker network inspect <network>`
 - **Volume Inspection**: `docker volume inspect <volume>`
 
-## Part 4: Docker for ML Projects
+
+### Part 4: Hands-on Docker Projects
+
+#### Project 1: Pre-built Docker Nginx Website Deployment
+This project is in [1-nginx-website](./1-nginx-website/) directory. Fmore more details on the project see the project [README](1-nginx-website/README.md).
+
+#### Project 2: Custom Docker PDF Generation with Python
+This project is in [2-pdf-generator](./2-pdf-generator/) directory. Fmore more details on the project see the project [README](./2-pdf-generator/README.md).
+
+#### Project 3: Docker Compose Medical Text Extraction Service
+This project is in [3-text-extractor](./3-text-extractor/) directory. Fmore more details on the project see the project [README](./3-text-extractor/README.md).
+
+
+## Part 5: Docker for ML Projects
 
 Docker provides several benefits for Machine Learning projects:
 
@@ -342,7 +355,7 @@ EXPOSE 8000
 CMD ["python3", "serve.py"]
 ```
 
-## Part 5: Modern Python Tooling uv
+## Part 6: Modern Python Tooling uv
 
 ### Comparison of Python Package Managers
 
